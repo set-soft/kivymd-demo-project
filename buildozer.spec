@@ -78,7 +78,11 @@ android.accept_sdk_license = True
 # android.logcat_filters = *:S python:D
 
 # (str) The Android arch to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
-android.arch = armeabi-v7a
+# =================================================
+# This value will be replaced in the workflow in gh actions. If you want to change or set this value
+# go to .github/workflows
+# =================================================
+android.arch = arm64-v8a
 
 
 [buildozer]
