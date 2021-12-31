@@ -52,9 +52,7 @@ class KitchenSinkSnackBar(MDScreen):
             snack = Snackbar(
                 text="This is a snackbar!", snackbar_x="20dp", snackbar_y="20dp"
             )
-            snack.size_hint_x = (
-                Window.width - (snack.snackbar_x * 2)
-            ) / Window.width
+            snack.size_hint_x = (Window.width - (snack.snackbar_x * 2)) / Window.width
             snack.buttons = [
                 MDFlatButton(
                     text="ACTION",
@@ -92,8 +90,6 @@ class KitchenSinkSnackBar(MDScreen):
                 self.snackbar.open()
                 anim = Animation(y=dp(72), d=0.2)
                 anim.bind(
-                    on_complete=lambda *args: Clock.schedule_interval(
-                        wait_interval, 0
-                    )
+                    on_complete=lambda *args: Clock.schedule_interval(wait_interval, 0)
                 )
                 anim.start(self.ids.button)

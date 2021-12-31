@@ -59,9 +59,7 @@ class KitchenSinkDataTables(MDScreen):
                 ("Donut", "215", "2.4", "43", "2.0", "24", "1%", "0.3%"),
             ],
         )
-        data_tables.ids.container.add_widget(
-            Widget(size_hint_y=None, height="5dp")
-        )
+        data_tables.ids.container.add_widget(Widget(size_hint_y=None, height="5dp"))
         data_tables.ids.container.add_widget(
             MDRaisedButton(
                 text="CLOSE",

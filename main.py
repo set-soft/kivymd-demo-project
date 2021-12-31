@@ -43,9 +43,7 @@ class KitchenSinkApp(MDApp):
 
     def build(self):
         Builder.load_file(
-            os.path.join(
-                os.environ["KITCHEN_SINK_ROOT"], "libs", "kv", "list_items.kv"
-            )
+            os.path.join(os.environ["KITCHEN_SINK_ROOT"], "libs", "kv", "list_items.kv")
         )
         return Builder.load_file(
             os.path.join(
@@ -91,9 +89,7 @@ class KitchenSinkApp(MDApp):
 
     def set_example_screen(self, name_screen):
         manager = self.root.ids.screen_manager
-        if not manager.has_screen(
-            self.data_screens[name_screen]["name_screen"]
-        ):
+        if not manager.has_screen(self.data_screens[name_screen]["name_screen"]):
             name_kv_file = self.data_screens[name_screen]["kv_string"]
             Builder.load_file(
                 os.path.join(

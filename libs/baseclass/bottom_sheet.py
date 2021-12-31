@@ -20,15 +20,11 @@ class KitchenSinkBottomSheet(Screen):
         bs_menu_1 = MDListBottomSheet()
         bs_menu_1.add_item(
             "Here's an item with text only",
-            lambda x: self.callback_for_menu_items(
-                "Here's an item with text only"
-            ),
+            lambda x: self.callback_for_menu_items("Here's an item with text only"),
         )
         bs_menu_1.add_item(
             "Here's an item with an icon",
-            lambda x: self.callback_for_menu_items(
-                "Here's an item with an icon"
-            ),
+            lambda x: self.callback_for_menu_items("Here's an item with an icon"),
             icon="clipboard-account",
         )
         bs_menu_1.add_item(
@@ -68,15 +64,11 @@ class KitchenSinkBottomSheet(Screen):
         )
         bs_menu.open()
 
-    def show_example_custom_bottom_sheet(
-        self, type, corner=None, animation=True
-    ):
+    def show_example_custom_bottom_sheet(self, type, corner=None, animation=True):
 
         if type == "custom":
             custom_screen_for_bottom_sheet = Factory.KitchenSinkBaseContent()
-            custom_screen_for_bottom_sheet.callback = (
-                self.callback_for_menu_items
-            )
+            custom_screen_for_bottom_sheet.callback = self.callback_for_menu_items
         elif type == "list":
             custom_screen_for_bottom_sheet = (
                 KitchenSinkBoxContentForBottomSheetCustomList()

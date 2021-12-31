@@ -19,12 +19,8 @@ class Home(Screen):
         anim.bind(on_complete=self.set_instance_backdrop_title)
         anim.start(instance_backdrop.ids.toolbar.ids.label_title)
 
-    def set_instance_backdrop_title(
-        self, instance_animation, instance_backdrop
-    ):
+    def set_instance_backdrop_title(self, instance_animation, instance_backdrop):
         instance_backdrop.text = (
-            "Menu"
-            if instance_backdrop.text == "Kitchen Sink"
-            else "Kitchen Sink"
+            "Menu" if instance_backdrop.text == "Kitchen Sink" else "Kitchen Sink"
         )
         Animation(opacity=1, d=0.2).start(instance_backdrop)

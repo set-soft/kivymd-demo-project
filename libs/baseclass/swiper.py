@@ -23,8 +23,6 @@ class KitchenSinkSwiper(MDScreen):
             ):
                 self.ids.swiper.add_widget(
                     KitchenSinkSwiperItem(
-                        source=os.path.join(
-                            os.environ["KITCHEN_SINK_ASSETS"], images
-                        )
+                        source=os.path.join(os.environ["KITCHEN_SINK_ASSETS"], images)
                     )
                 )
