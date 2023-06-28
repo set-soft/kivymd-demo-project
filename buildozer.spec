@@ -61,7 +61,7 @@ android.api = 33
 android.minapi = 21
 
 # (str) Android NDK version to use
-android.ndk = 19b
+android.ndk = 25b
 
 # (bool) If True, then skip trying to update the Android sdk
 # This can be useful to avoid excess Internet downloads or save time
@@ -82,7 +82,7 @@ android.accept_sdk_license = True
 # This value will be replaced in the workflow in gh actions. If you want to change or set this value
 # go to .github/workflows
 # =================================================
-android.arch = arm64-v8a
+android.archs = arm64-v8a
 
 
 [buildozer]
