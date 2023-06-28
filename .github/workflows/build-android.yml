@@ -23,7 +23,7 @@ jobs:
         run: python change_arch.py --arch ${{ matrix.arch }}
 
       - name: Build with Buildozer
-        uses: ArtemSBulgakov/buildozer-action@v1
+        uses: ArtemSBulgakov/buildozer-action@v1.1.3
         id: buildozer
         with:
           buildozer_version: stable
